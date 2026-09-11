@@ -1,0 +1,54 @@
+name: Update allowlist
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # taeglich 04:17 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - "sources.txt"
+      - "quarantine.txt"
+      - "allowlist-local.txt"
+      - "build.py"
+      - ".github/workflows/update.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-allowlist
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build allowlist
+        run: python3 build.py
+
+      - name: Sanity check
+        run: |
+          count=$(grep -cve '^\s*#' -e '^\s*$' allowlist.txt)
+          echo "Eintraege: $count"
+          if [ "$count" -lt 50 ]; then
+            echo "::error::Nur $count Eintraege - sieht nach kaputtem Upstream aus, Abbruch."
+            exit 1
+          fi
+
+      - name: Commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- allowlist.txt; then
+            echo "Keine Aenderung."
+            exit 0
+          fi
+          git add allowlist.txt
+          git commit -m "chore: allowlist aktualisiert ($(date -u +%Y-%m-%d))"
+          git push

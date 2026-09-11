@@ -1,0 +1,98 @@
+# quarantine.txt
+#
+# Eintraege, die in den Upstream-Allowlists aktiv stehen, aber Werbe-, Tracking-
+# oder Telemetrie-Endpunkte sind. build.py nimmt sie NICHT in allowlist.txt auf.
+#
+# Wenn du einen davon doch brauchst: Zeile hier entfernen UND mit Grund + Datum
+# in allowlist-local.txt eintragen. Nichts stillschweigend zurueckholen.
+#
+# Format: eine Domain pro Zeile, # = Kommentar.
+# Quelle in Klammern: [NF] Naglafarn, [ZL] zachlagden, [beide] in beiden.
+
+# ---------------------------------------------------------------------------
+# Ad Exchanges / Ad Server
+# ---------------------------------------------------------------------------
+acdn.adnxs.com                  # [NF] AppNexus/Xandr Ad Exchange
+cdn1.smartadserver.com          # [NF] Smart AdServer
+ec-ns.sascdn.com                # [NF] Smart AdServer CDN
+npr-news.streaming.adswizz.com  # [NF] AdsWizz Audio-Ads
+ads.facebook.com                # [ZL] Meta Ads
+an.facebook.com                 # [ZL] Meta Audience Network
+pixel.facebook.com              # [ZL] Meta Pixel
+srtb.msn.com                    # [ZL] MSN Real-Time-Bidding
+
+# ---------------------------------------------------------------------------
+# Audience Measurement / Analytics
+# ---------------------------------------------------------------------------
+cdn-gl.imrworldwide.com         # [NF] Nielsen
+secure-eu.imrworldwide.com      # [NF] Nielsen
+cws.conviva.com                 # [beide] Conviva Video-Analytics
+zee.cws.conviva.com             # [beide] Conviva
+pings.conviva.com               # [beide] Conviva
+livepassdl.conviva.com          # [beide] Conviva
+om.cbsi.com                     # [NF] CBS Omniture
+video-stats.l.google.com        # [beide] YouTube Playback-Statistik
+cdn.optimizely.com              # [beide] Optimizely A/B-Testing
+cdn2.optimizely.com             # [NF] Optimizely
+cdn3.optimizely.com             # [NF] Optimizely
+analytics.svt.se                # [ZL] SVT Play Analytics (regional SE, brauchst du nicht)
+
+# ---------------------------------------------------------------------------
+# Marketing-Automation / Chat-Widgets mit Profiling
+# ---------------------------------------------------------------------------
+sdk.fra-01.braze.eu             # [NF] Braze
+rest.iad-03.braze.com           # [ZL] Braze
+drift.com                       # [beide] Drift
+driftt.com                      # [beide] Drift
+intercom.io                     # [beide] Intercom
+tawk.to                         # [beide] Tawk.to
+widget-cdn.rpxnow.com           # [NF] Janrain/Akamai Identity
+display.ugc.bazaarvoice.com     # [NF] Bazaarvoice
+
+# ---------------------------------------------------------------------------
+# Telemetrie
+# ---------------------------------------------------------------------------
+v10.events.data.microsoft.com     # [beide] Windows-Telemetrie
+v20.events.data.microsoft.com     # [beide] Windows-Telemetrie
+mobile.events.data.microsoft.com  # [ZL] Windows-Telemetrie (mobil)
+settings-win.data.microsoft.com   # [ZL] Windows-Telemetrie-Settings
+settings.data.microsoft.com       # [ZL] Windows-Telemetrie-Settings
+crashlogs.whatsapp.net            # [ZL] WhatsApp Crash-Reporting
+prod.telemetry.ros.rockstargames.com  # [ZL] Rockstar-Telemetrie
+telemetry-console.api.playstation.com # [ZL] PlayStation-Telemetrie
+tracking.epicgames.com            # [ZL] Epic Analytics (Kauf/2FA laufen ohne)
+track.ip-prod.aws-cbc.cloud       # [NF] Tracking-Endpunkt (RTL/CBC)
+xboxexperiencesprod.experimentation.xboxlive.com  # [NF] Xbox A/B-Experimente
+
+# ---------------------------------------------------------------------------
+# Windows-Spotlight / MSN-Werbeflaechen (Sperrbildschirm, Edge-Neuer-Tab)
+# api.msn.com, assets.msn.com und www.msn.com bleiben drin - das ist Inhalt.
+# ---------------------------------------------------------------------------
+ris.api.iris.microsoft.com      # [ZL] Windows Spotlight Ads
+c.msn.com                       # [ZL] MSN Click-Tracking
+ntp.msn.com                     # [ZL] Edge New-Tab-Page Feed/Ads
+arc.msn.com                     # [ZL] Spotlight Asset-Delivery
+
+# ---------------------------------------------------------------------------
+# Video-Ad-Plattform (Vidible/Verizon)
+# ---------------------------------------------------------------------------
+cdn.vidible.tv                  # [NF]
+delivery.vidible.tv             # [NF]
+img.vidible.tv                  # [NF]
+videos.vidible.tv               # [NF]
+
+# ---------------------------------------------------------------------------
+# Link-Shortener / Embeds mit Klick-Tracking
+# ---------------------------------------------------------------------------
+t.co                            # [beide] Twitter/X Click-Tracking
+cdn.embedly.com                 # [beide] Embedly
+
+# ---------------------------------------------------------------------------
+# BEWUSST NICHT quarantaeniert, obwohl es danach aussieht:
+#   wdcp.microsoft.com / wdcpalt.microsoft.com  - Defender Cloud Protection
+#   tracking-protection.cdn.mozilla.net          - Firefox-Schutzlisten
+#   tracking.dpd.de                              - Paketverfolgung
+#   cookiebot.com / consent.cookiebot.*          - ohne die haengen Cookie-Banner
+#   geolocation.onetrust.com                       und die Seite bleibt unbedienbar
+#   tsfe.trafficshaping.dsp.mp.microsoft.com     - Delivery Optimization
+# ---------------------------------------------------------------------------

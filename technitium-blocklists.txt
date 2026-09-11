@@ -1,0 +1,50 @@
+# Technitium: Settings -> Blocking -> Block List URLs
+#
+# Alle Dateinamen am 2026-09-11 gegen das hagezi-Repo geprueft.
+# Das "!" am Ende markiert die Allow-List (Repo hennscho/blocklist).
+#
+# Technitium ignoriert Kommentarzeilen in diesem Feld NICHT - also beim Einfuegen
+# nur die URLs uebernehmen, nicht diesen Kommentarblock.
+
+# === Basis: Werbung, Tracker, Malware, Phishing ============================
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.medium.txt
+
+# === Bypass-Schutz: verhindert, dass Clients per DoH/VPN an dir vorbeigehen ==
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/doh-vpn-proxy-bypass.txt
+
+# === Spam-TLDs (.zip, .top, .cfd ...) ======================================
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds-adblock.txt
+
+# === Native Tracker pro Hersteller =========================================
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.samsung.txt
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.lgwebos.txt
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.roku.txt
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.apple.txt
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.amazon.txt
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.winoffice.txt
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.xiaomi.txt
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.huawei.txt
+
+# === Ergaenzungen, die kein anderer abdeckt ================================
+https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt
+https://raw.githubusercontent.com/AssoEchap/stalkerware-indicators/master/generated/hosts
+
+# === Deine Allow-List ======================================================
+!https://raw.githubusercontent.com/hennscho/blocklist/main/allowlist.txt
+
+
+# ---------------------------------------------------------------------------
+# Optional, je nach Geschmack:
+#   .../adblock/popupads.txt                  Popup-/Fake-Werbung
+#   .../adblock/native.tiktok.txt             TikTok
+#   .../adblock/native.vivo.txt               Vivo
+#   .../adblock/native.oppo-realme.txt        OPPO/Realme
+#   .../adblock/tif.txt                       TIF vollstaendig statt medium
+#                                             (~2 Mio. Eintraege, deutlich mehr RAM)
+#
+# Fuer Google gibt es bei hagezi bewusst KEINE native-Liste - Google-Telemetrie
+# laesst sich nicht sauber von Google-Funktionalitaet trennen. Der einzige Hebel
+# ist ultimate.txt statt pro.txt, das kostet aber Funktionalitaet (WhatsApp,
+# Teile von Windows). Fuer Kundennetze nicht empfohlen.
+# ---------------------------------------------------------------------------

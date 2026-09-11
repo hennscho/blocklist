@@ -1,0 +1,12 @@
+# allowlist-local.txt
+#
+# Deine eigenen Ausnahmen. Diese Datei ist die einzige, die du von Hand pflegst
+# und die kein Upstream ueberschreiben kann.
+#
+# Regel: jede Zeile bekommt Datum, Kunde/Kontext und Grund. Ohne Grund keine
+# Ausnahme - sonst weiss in zwoelf Monaten niemand mehr, warum das drinsteht.
+#
+# Beispiel:
+# lizenz.pvs-hersteller.de     # 2026-09-11 Praxis Ratingen - Lizenzserver PVS, NXDOMAIN blockierte Start
+# update.medsoftware.example   # 2026-09-11 Praxis Ratingen - Updateserver
+

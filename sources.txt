@@ -1,0 +1,5 @@
+# Upstream-Allowlists, die build.py zusammenfuehrt.
+# Eine URL pro Zeile, # = Kommentar.
+
+https://raw.githubusercontent.com/Naglafarn/Technitium/refs/heads/main/Whitelist-Technitium-2025.txt
+https://raw.githubusercontent.com/zachlagden/Pi-hole-Optimized-Blocklists/refs/heads/main/whitelist.txt

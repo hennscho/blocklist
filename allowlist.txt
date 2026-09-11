@@ -3,11 +3,11 @@
 # AUTOGENERIERT von build.py - nicht von Hand bearbeiten.
 # Eigene Ausnahmen gehoeren in allowlist-local.txt.
 #
-# Stand:       2026-09-11 13:08 UTC
-# Eintraege:   449
-# Quellen:     2 von 2 erreichbar
+# Stand:      2026-09-11 13:20 UTC
+# Eintraege:  449
+# Quellen:    2 von 2 erreichbar
 # Quarantaene: 49 Eintraege entfernt (siehe quarantine.txt)
-# Lokal:       0 eigene Eintraege
+# Lokal:      0 eigene Eintraege
 #
 # [ok ]   222  https://raw.githubusercontent.com/Naglafarn/Technitium/refs/heads/main/Whitelist-Technitium-2025.txt
 # [ok ]   459  https://raw.githubusercontent.com/zachlagden/Pi-hole-Optimized-Blocklists/refs/heads/main/whitelist.txt

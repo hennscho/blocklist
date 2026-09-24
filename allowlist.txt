@@ -3,14 +3,14 @@
 # AUTOGENERIERT von build.py - nicht von Hand bearbeiten.
 # Eigene Ausnahmen gehoeren in allowlist-local.txt.
 #
-# Stand:      2026-09-23 09:19 UTC
-# Eintraege:  451
+# Stand:      2026-09-24 09:19 UTC
+# Eintraege:  453
 # Quellen:    2 von 2 erreichbar
 # Quarantaene: 49 Eintraege entfernt (siehe quarantine.txt)
 # Lokal:      0 eigene Eintraege
 #
 # [ok ]   222  https://raw.githubusercontent.com/Naglafarn/Technitium/refs/heads/main/Whitelist-Technitium-2025.txt
-# [ok ]   461  https://raw.githubusercontent.com/zachlagden/Pi-hole-Optimized-Blocklists/refs/heads/main/whitelist.txt
+# [ok ]   463  https://raw.githubusercontent.com/zachlagden/Pi-hole-Optimized-Blocklists/refs/heads/main/whitelist.txt
 
 0.client-channel.google.com
 106c06cd218b007d-b1e8a1331f68446599e96a4b46a050f5.ams.plex.services
@@ -200,6 +200,7 @@ gstaticadssl.l.google.com
 h-sdk.online-metrix.net
 help.ui.xboxlive.com
 hls.ted.com
+hudong.com
 hwcdn.net
 i.instagram.com
 i.s-microsoft.com
@@ -325,6 +326,7 @@ res.cloudinary.com
 rt.services.visualstudio.com
 rtlplus-fairplay.streamingtech.de
 rupload.facebook.com
+rusfootball.info
 s.gateway.messenger.live.com
 s.marketwatch.com
 s.mzstatic.com

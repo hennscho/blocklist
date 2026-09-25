@@ -3,7 +3,7 @@
 # AUTOGENERIERT von build.py - nicht von Hand bearbeiten.
 # Eigene Ausnahmen gehoeren in allowlist-local.txt.
 #
-# Stand:      2026-09-24 09:19 UTC
+# Stand:      2026-09-25 09:37 UTC
 # Eintraege:  453
 # Quellen:    2 von 2 erreichbar
 # Quarantaene: 49 Eintraege entfernt (siehe quarantine.txt)

@@ -3,14 +3,14 @@
 # AUTOGENERIERT von build.py - nicht von Hand bearbeiten.
 # Eigene Ausnahmen gehoeren in allowlist-local.txt.
 #
-# Stand:      2026-10-07 11:05 UTC
-# Eintraege:  454
+# Stand:      2026-10-08 11:23 UTC
+# Eintraege:  455
 # Quellen:    2 von 2 erreichbar
 # Quarantaene: 49 Eintraege entfernt (siehe quarantine.txt)
 # Lokal:      0 eigene Eintraege
 #
 # [ok ]   222  https://raw.githubusercontent.com/Naglafarn/Technitium/refs/heads/main/Whitelist-Technitium-2025.txt
-# [ok ]   464  https://raw.githubusercontent.com/zachlagden/Pi-hole-Optimized-Blocklists/refs/heads/main/whitelist.txt
+# [ok ]   465  https://raw.githubusercontent.com/zachlagden/Pi-hole-Optimized-Blocklists/refs/heads/main/whitelist.txt
 
 0.client-channel.google.com
 106c06cd218b007d-b1e8a1331f68446599e96a4b46a050f5.ams.plex.services
@@ -423,6 +423,7 @@ w9.web.whatsapp.com
 wa.me
 wdcp.microsoft.com
 wdcpalt.microsoft.com
+weatherextension.com
 web.facebook.com
 web.telegram.org
 web.whatsapp.com
